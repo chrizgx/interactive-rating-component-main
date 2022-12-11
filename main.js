@@ -16,3 +16,10 @@ function toggleTheme () {
         current[0].className = "light-theme";
     }
 }
+
+function submit () {
+    let rating = document.getElementsByClassName('button-active')[0].textContent;
+    document.getElementsByClassName('selected')[0].innerHTML = `You selected ${rating} out of 5`;
+    document.getElementsByClassName('rating-card-thanks')[0].style.display = "flex";
+    document.getElementsByClassName('rating-card-main')[0].style.display = "none";
+}

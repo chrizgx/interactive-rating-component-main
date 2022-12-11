@@ -78,6 +78,7 @@ html, body {
 
 .header {
     color: var(--header-color);
+    font-weight: 700;
 }
 
 .text {
@@ -87,6 +88,7 @@ html, body {
 .rating-component {
     display: flex;
     justify-content: space-between;
+    min-width: 100%;
 }
 
 .rating-component button {
@@ -114,7 +116,7 @@ html, body {
     color: var(--submit-text-color);
     font-weight: bold;
     border: none;
-    border-radius: 100px;
+    border-radius: 22.5px;
 }
 
 .submit:hover, .submit:active {
@@ -135,13 +137,28 @@ html, body {
     --submit-background-border-hover-color: var(--submit-background-color);
 }
 
-@media (min-width: 400px) {
+/* Thank you section */
+
+.rating-card-thanks {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.selected {
+    background-color: var(--number-background-color);
+    color: var(--submit-background-color);
+    border-radius: 22.5px;
+}
+
+@media (min-width: 600px) {
     .rating-card {
         width: 412px;
         height: 416px;
     }
 
-    .rating-card-main {
+    .rating-card-main, .rating-card-thanks {
         margin: 32px 39px 32px 32px;
     }
 
@@ -164,7 +181,6 @@ html, body {
     }
 
     .rating-component {
-        min-width: 100%;
         margin-bottom: 32px;
     }
 
@@ -172,8 +188,6 @@ html, body {
         width: 51px;
         height: 51px;
         font-size: 16px;
-        text-align: center;
-        vertical-align: center;
     }
 
     .submit {
@@ -181,5 +195,78 @@ html, body {
         height: 45px;
         font-size: 15px;
         letter-spacing: 2px;
+    }
+
+    .rating-card-thanks img {
+        width: 162px;
+        height: 108px;
+        margin-bottom: 32px;
+    }
+
+    .selected {
+        font-size: 15px;
+        line-height: 24px;
+        padding: 4px 20px;
+        margin-bottom: 36px;
+    }
+}
+
+@media (max-width: 599px) {
+    .rating-card {
+        width: 327px;
+        height: 340px;
+    }
+
+    .rating-card-main, .rating-card-thanks {
+        margin: 24px;
+    }
+
+    .star-button {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 16px;
+    }
+
+    .header {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .text {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+
+    .rating-component {
+        margin-bottom: 24px;
+    }
+
+    .rating-component button {
+        width: 42px;
+        height: 42px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .submit {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+
+    .rating-card-thanks img {
+        width: 144px;
+        height: 96px;
+        margin-bottom: 24px;
+    }
+
+    .selected {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 5px 12px;
+        margin-bottom: 24px;
     }
 }
