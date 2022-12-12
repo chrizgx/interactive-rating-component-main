@@ -1,7 +1,7 @@
 function rating (number) {
     let current = document.getElementsByClassName("button-active");
     if (current.length > 0) {
-        current[0].className = current[0].className.replace("active", "");
+        current[0].className = current[0].className.replace("button-active", "");
     }
 
     let newRating = document.getElementsByClassName(`rating-${number}`)[0];
